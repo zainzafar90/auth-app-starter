@@ -1,0 +1,26 @@
+<div class="col-sm-4 col-sm-offset-4">
+    <form class="form-signin" name="form" (ngSubmit)="onLogin()">
+        <h2 class="form-signin-heading text-center">Sign In</h2>
+
+        <!--Email-->
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input [(ngModel)]="user.email" name="userEmail" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+
+        <!--Password-->
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input [(ngModel)]="user.password" name="userPassword" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <br>
+
+        <!--Login Button-->
+        <button class="btn btn-lg btn-primary btn-block" type="submit">
+          Sign in
+        </button>
+
+        <hr>
+    </form>
+    <!--Google Login-->
+    <button class="btn btn-lg btn-danger btn-block" (click)="signInWithGoogle()">
+          Sign in with Google Plus
+    </button>
+
+</div>
